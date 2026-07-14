@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias Simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Portal de Notícias</h1>
+    </header>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Notícias</a>
+        <a href="#">Contato</a>
+    </nav>
+    
+    <main>
+        <section id="interacao">
+            <h2>Interação</h2>
+            <p>Digite seu nome:</p>
+            <input type="text" id="nomeUsuario" placeholder="Seu nome aqui">
+            <button onclick="mostrarMensagem()">Mostrar Mensagem</button>
+            <p id="mensagem"></p>    
+        </section>
+        <section>
+            <h2>Últimas Notícias</h2>
+            
+            <article>
+                <h3>Novo Curso de HTML e CSS</h3>
+                <p>Foi lançado um novo curso de <strong>HTML</strong> e <strong>CSS</strong> para iniciantes. 
+                O curso é <em>totalmente gratuito</em> e online.</p>
+                <p><small>Publicado em: 15 de Maio de 2023</small></p>
+            </article>
+            
+            <article>
+                <h3>Tecnologia na Educação</h3>
+                <p>As escolas estão usando cada vez mais <mark>tecnologia</mark> para melhorar o ensino. 
+                Tablets, laptops e quadros inteligentes estão se tornando comuns.</p>
+                <p><small>Publicado em: 14 de Maio de 2023</small></p>
+            </article>
+        </section>
+        
+        <aside>
+            <h3>Links Úteis</h3>
+            <p><a href="#" target="_blank">Portal Educação</a></p>
+            <p><a href="#">Cursos Online</a></p>
+        </aside>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Portal de Notícias Simples</p>
+        <p><small>Site educativo para prática de HTML e CSS</small></p>
+    </footer>
+    <script>
+        function mostrarMensagem()
+        {
+            let nome = document.getElementById("nomeUsuario").value;
+            if(nome ==="")
+        {
+    document.getElementById("mensagem").innerText = "Por favor, digite seu nome!";}
+    else {document.getElementById("mensagem").innerText = "Olá, "+ nome + "! Seja bem-vindo!";
+        }}
+    </script>
+</body>
+</html>
